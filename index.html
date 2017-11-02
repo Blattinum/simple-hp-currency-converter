@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>simplehpcc.collinblatt.com</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet" integrity="sha384-awusxf8AUojygHf2+joICySzB780jVvQaVCAt1clU3QsyAitLGul28Qxb2r1e5g+" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Shrikhand|Special+Elite|Lily+Script+One|Raleway" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+
+     <script src="script.js" defer></script>
+
+     <style>
+     body {
+       margin:0 auto 0 auto;
+       padding: 10px;
+       overflow: visible;
+       font-family: 'Raleway', serif;
+       font-size: 20px;
+     }
+     </style>
+</head>
+
+<body>
+    <div class="well well-lg">
+
+    <form class="form-horizontal">
+        <fieldset>
+
+        <!-- Form Name -->
+        <legend>Simple Harry Potter Currency Converter (USD)</legend>
+
+        <!-- Multiple Radios -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="conversionmethods">Conversion Method:</label>
+          <div class="col-md-4">
+          <div class="radio">
+            <label for="reddit_Method">
+              <input type="radio" name="conversionmethods" id="reddit_Method" value="reddit" checked="checked">
+              Reddit<sup>[<a href="#source1">1</a>]</sup> (G=$25,S=$1.50,K=$0.05)
+            </label>
+            </div>
+          <div class="radio">
+            <label for="wikia_Method">
+              <input type="radio" name="conversionmethods" id="wikia_Method" value="wikia">
+              Wikia<sup>[<a href="#source2">2</a>]</sup> (G=$7.35,S=$0.46,K=$0.02)
+            </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="lblGalleons">Galleons:</label>
+          <div class="col-md-1">
+          <input id="lblGalleons" name="lblGalleons" type="text" placeholder="0" class="form-control input-md">
+
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="lblSickles">Sickles:</label>
+          <div class="col-md-1">
+          <input id="lblSickles" name="lblSickles" type="text" placeholder="0" class="form-control input-md">
+
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="lblKnuts">Knuts:</label>
+          <div class="col-md-1">
+          <input id="lblKnuts" name="lblKnuts" type="text" placeholder="0" class="form-control input-md">
+
+          </div>
+        </div>
+
+        <!-- Button -->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="btnCalc"></label>
+    <div class="col-md-4">
+      <button id="btnCalc" name="btnCalc" class="btn btn-primary">Accio Result&nbsp;<i class="fa fa-magic"></i></button>
+    </div>
+  </div>
+
+        <!-- Result -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="lblResult">Result (USD):</label>
+          <div class="col-md-1">
+          <input readonly id="lblResult" name="lblResult" type="text" value="$" class="form-control input-md">
+                <button class="btn btn-info btn-cpy" data-clipboard-action="copy" data-clipboard-target="#lblResult">Copy&nbsp;<i class="fa fa-copy"></i></button>
+									<!-- Instantiate clipboard -->
+								<script>
+								var clipboard = new Clipboard('.btn-cpy');
+								clipboard.on('success', function(e) {
+									console.log(e);
+								});
+								clipboard.on('error', function(e) {
+									console.log(e);
+								});
+								</script>
+		 </div>
+        </div>
+
+        </fieldset>
+        </form>
+
+
+
+<br>
+<hr />
+
+<h4>Source(s):</h4>
+
+<p><a href="https://www.reddit.com/r/harrypotter/comments/43qv9c/lets_talk_wizard_money_a_look_through_everything/" target="_blank" id="source1" style="word-wrap:break-word;">[1]: https://www.reddit.com/r/harrypotter/comments/43qv9c/lets_talk_wizard_money_a_look_through_everything/</a></p>
+<p><a href="http://harrypotter.wikia.com/wiki/Wizarding_currency#Exchange_Rate" target="_blank" id="source2" style="word-wrap:break-word;">[2]: http://harrypotter.wikia.com/wiki/Wizarding_currency#Exchange_Rate</a></p>
+<p id="puppy"></p>
+</div>
+</body>
+
+</html>

@@ -2,7 +2,9 @@
 					  Version 3, 29 June 2007
 */
 
-var galleonsDollarValue, sicklesDollarValue, knutsDollarValue;
+var usrGalDollarValue;
+var usrSicklDollarValue;
+var usrKnutsDollarValue;
 
 if(document.getElementById("reddit_Method").checked) {
 	galleonsDollarValue = 25;

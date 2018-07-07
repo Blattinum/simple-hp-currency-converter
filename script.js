@@ -2,9 +2,9 @@
 					  Version 3, 29 June 2007
 */
 
-var usrGalleonsDollarValue = document.getElementById("lblGalleons");
-var usrSicklesDollarValue = document.getElementById("lblSickles");
-var usrKnutsDollarValue = document.getElementById("lblKnuts");
+var usrGalleonsDollarValue = document.getElementById('lblGalleons').innerHTML;
+var usrSicklesDollarValue = document.getElementById('lblSickles').innerHTML;
+var usrKnutsDollarValue = document.getElementById('lblKnuts').innerHTML;
 var usrDollars;
 
 if(document.getElementById("reddit_Method").checked) {

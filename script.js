@@ -7,12 +7,12 @@ var usrSicklesDollarValue = document.getElementById('lblSickles').innerHTML;
 var usrKnutsDollarValue = document.getElementById('lblKnuts').innerHTML;
 var usrDollars;
 
-function ConversionCalc () {
+function ConversionCalc() {
 	if(document.getElementById("reddit_Method").checked) {
 		usrGalleonsDollarValue *= 25;
 		usrSicklesDollarValue *= 1.50;
 		usrKnutsDollarValue *= 0.05;
-		usrDollars = usrGalleonsDollarValue + usrSicklesDollarValue + usrKnutsDollarValue; 
+		usrDollars = usrGalleonsDollarValue + usrSicklesDollarValue + usrKnutsDollarValue;
 	}else if(document.getElementById("wikia_Method").checked) {
 		usrGalleonsDollarValue *= 7.35;
 		usrSicklesDollarValue *= 0.46;
@@ -22,6 +22,6 @@ function ConversionCalc () {
 	return usrDollars;
 }
 
-document.getElementById("btnCalc").addEventListener("click", ConversionCalc (){
+document.getElementById("btnCalc").addEventListener("click", ConversionCalc()){
     document.getElementById("lblResult").innerHTML = "Hello World";
 });

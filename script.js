@@ -7,6 +7,10 @@ var usrSicklesDollarValue = document.getElementById('lblSickles').innerHTML;
 var usrKnutsDollarValue = document.getElementById('lblKnuts').innerHTML;
 var usrDollars;
 
+document.getElementById("btnCalc").addEventListener("click", ConversionCalc); /*{
+    document.getElementById("lblResult").innerHTML = "Hello World";
+}); */
+
 function ConversionCalc() {
 	if(document.getElementById("reddit_Method").checked) {
 		usrGalleonsDollarValue *= 25;
@@ -22,6 +26,4 @@ function ConversionCalc() {
 	return usrDollars;
 }
 
-document.getElementById("btnCalc").addEventListener("click", ConversionCalc()){
-    document.getElementById("lblResult").innerHTML = "Hello World";
-});
+document.getElementById("lblResult").innerHTML = usrDollars;

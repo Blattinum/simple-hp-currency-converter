@@ -27,7 +27,7 @@
        margin:0 auto 0 auto;
        padding: 10px;
        overflow: visible;
-       font-family: 'Raleway', serif;
+       font-family: 'Raleway', Arial, serif;
        font-size: 20px;
      }
      </style>
@@ -100,7 +100,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="lblResult">Result (USD):</label>
           <div class="col-md-1">
-          <input readonly id="lblResult" name="lblResult" type="text" value="$" class="form-control input-md">
+          <input id="lblResult" name="lblResult" type="text" value="$" class="form-control input-md"> <!--you could add readonly after input-->
                 <button class="btn btn-info btn-cpy" data-clipboard-action="copy" data-clipboard-target="#lblResult">Copy&nbsp;<i class="fa fa-copy"></i></button>
 									<!-- Instantiate clipboard -->
 								<script>

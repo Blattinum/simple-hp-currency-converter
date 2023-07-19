@@ -38,6 +38,24 @@
 </head>
 
 <body>
+
+  <script>
+    // Function to set the window title to the current domain
+    function setWindowTitleToDomain() {
+      // Get the current domain from window.location
+      var currentDomain = window.location.hostname;
+
+      // Set the window title to the current domain
+      document.title = currentDomain;
+    }
+
+    // Call the function on page load
+    window.onload = function() {
+      setWindowTitleToDomain();
+    };
+  </script>
+
+
   <div class="well well-lg">
 
     <form class="form-horizontal">
